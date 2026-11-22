@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
 import "./assets/css/main.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import HomTemplate from "./template/HomTemplate";
@@ -13,7 +13,7 @@ import DetailProduct from "./page/DetailProduct";
 import ProfilePage from "./page/ProfilePage";
 
 createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
+  <HashRouter>
     <Provider store={store}>
       <Routes>
         <Route path="" element={<HomTemplate />}>
@@ -27,5 +27,5 @@ createRoot(document.getElementById("root")).render(
         </Route>
       </Routes>
     </Provider>
-  </BrowserRouter>,
+  </HashRouter>,
 );
